@@ -2,16 +2,16 @@
 
 {% block content %}
 
-<form action="/books" method="post">
-    <div>
+<form class="parent" action="/books" method="post">
+    <div class="child">
         <label for="title">Title:</label>
         <input type="text" name="title" required>
     </div>
-    <div>
+    <div class="child">
         <label for="genre">Genre:</label>
         <input type="text" name="genre" required>
     </div>
-    <div>
+    <div class="child">
         <label for="author_id">Author:</label>
         <select name="author_id">
             {% for author in authors %}

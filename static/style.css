@@ -1,0 +1,55 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+header {
+    background: lightcoral;
+    padding: 1rem;
+}
+
+nav>ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+nav>ul>li>a {
+    text-decoration: none;
+    color: white;
+    padding-right: 1rem;
+}
+
+nav>ul>li>a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    background: lightblue;
+    padding: 2rem;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.child {
+    flex: 0 1 300px;
+    flex: 1 1 300px;
+    border: 1px solid rgb(52, 52, 52);
+    font-size: 2rem;
+    text-align: center;
+}
+
+input {
+    height: 2rem;
+    width: 8rem;
+}
