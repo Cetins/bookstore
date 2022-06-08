@@ -2,6 +2,27 @@
 
 {% block content %}
 
-<h1>This is books index page</h1>
+<h1>Books</h1>
+
+{% for row in books %}
+<div>
+    <p>Title : {{ row.title }}</p>
+    <p>Genre : {{ row.genre }}</p>
+</div>
+<div>
+    {% for author in authors %}
+        {% if row.author_id == author.id %}
+            <p>Author : {{ author.name }}</p>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<form action="/books/{{row.id}}/delete" method="POST">
+    <button type="submit">Delete</button>
+</form>
+
+{% endfor %}
+
+<table>
 
 {% endblock %}

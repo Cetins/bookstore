@@ -17,3 +17,8 @@ def select_all():
     for result in results:
         books.append(result)
     return books
+
+def delete(id):
+    sql = "DELETE FROM books WHERE id=%s"
+    values = [id]
+    run_sql(sql, values)
